@@ -1,0 +1,35 @@
+/* Assignment 1
+ * Student: Roberto Melchor
+ * CISC 3115
+ * Brooklyn College
+*/
+
+import java.util.Scanner;
+
+public class HW1 {
+  public static void main(String[] args) {
+    Scanner keyboard = new Scanner(System.in);
+		int pin = 91219;
+		int tries = 0;
+    int maxTries= 4;
+
+		System.out.println("WELCOME TO THE BANK OF BC.");
+		System.out.print("ENTER YOUR PIN: ");
+		int entry = keyboard.nextInt();
+		tries++;
+
+		while ( entry != pin && tries < maxTries )
+		{
+			System.out.println("\nINCORRECT PIN. TRY AGAIN.");
+			System.out.print("ENTER YOUR PIN: ");
+			entry = keyboard.nextInt();
+			tries++;
+		}
+
+		if ( entry == pin )
+			System.out.println("\nPIN ACCEPTED. ACCOUNT ACCESS GRANTED.");
+		else if ( tries >= maxTries )
+			System.out.println("\nYOU HAVE USED UP ALL 4 OF YOUR TRIES. ACCOUNT IS NOW PERMANENTLY LOCKED.");
+  }
+}
+
