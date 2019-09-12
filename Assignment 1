@@ -11,7 +11,7 @@ public class HW1 {
     Scanner keyboard = new Scanner(System.in);
 		int pin = 91219;
 		int tries = 0;
-    int maxTries= 4;
+        int maxTries= 4;
 
 		System.out.println("WELCOME TO THE BANK OF BC.");
 		System.out.print("ENTER YOUR PIN: ");
